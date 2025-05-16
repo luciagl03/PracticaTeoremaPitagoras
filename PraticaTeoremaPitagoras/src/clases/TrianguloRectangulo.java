@@ -13,8 +13,8 @@
 		 * Constructor por defecto que crea un triangulo rectangulo donde a = 1, b = 2
 		 */
 		public TrianguloRectangulo() {
-			a = 1;
-			b = 1;
+			this.a = 1;
+			this.b = 1;
 		}
 		
 		/**
@@ -37,7 +37,7 @@
 		 * @return		area en double
 		 */
 		public double area() {
-			double area = (this.a*this.b)/2;
+			double area = (double)(Math.round((this.a*this.b)/2)*100.0)/100.0;
 			return area;
 		}
 		
@@ -47,7 +47,7 @@
 		 * @return		hipotenusa en double
 		 */
 		public double hipotenusa() {
-			c = Math.sqrt((a*a)+(b*b));
+			c = (double)(Math.round(Math.sqrt((a*a)+(b*b)))*100.0)/100.0;
 			return c;
 		}
 		
@@ -57,7 +57,7 @@
 		 * @return		perimetro en double
 		 */
 		public double perimetro() {
-			double perimetro = this.a*this.b*this.hipotenusa();
+			double perimetro = (double)(Math.round(this.a*this.b*this.hipotenusa())*100.0)/100.0;
 			return perimetro;
 		}
 		
